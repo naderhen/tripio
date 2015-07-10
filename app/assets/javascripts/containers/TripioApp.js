@@ -20,6 +20,7 @@ export default class TodoApp {
       <div>
         <Header addTodo={actions.addTodo} />
         <MainSection todos={todos} actions={actions} />
+        <div className="ui segment"></div>
       </div>
     );
   }

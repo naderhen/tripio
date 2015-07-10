@@ -28,7 +28,7 @@ module.exports = {
   ],
  
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx', 'scss']
   },
  
   module: {
@@ -38,6 +38,10 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
         loaders: ['react-hot', 'babel-loader']
+      },
+      {
+        test: /\.css?$/,
+        loaders: ['style', 'raw']
       }
     ]
   }
