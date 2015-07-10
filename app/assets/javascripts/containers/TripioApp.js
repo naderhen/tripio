@@ -19,6 +19,16 @@ export default class TodoApp {
     return (
       <div className="ui container">
         <Header addTodo={actions.addTodo} />
+        <div className="ui segment grid">
+          <div className="two wide column">
+            <img className="ui medium circular bordered image" src="http://semantic-ui.com/images/wireframe/white-image.png" />
+          </div>
+          <div className="twelve wide column">
+            <h3>United Airlines Flight JFK -> Shannon</h3>
+            <p>Booking Ref: 1234567890</p>
+          </div>
+          <div className="two wide column"></div>
+        </div>
         <MainSection todos={todos} actions={actions} />
       </div>
     );
