@@ -14,12 +14,24 @@ export default class Header {
 
   render() {
     return (
-      <header className='header'>
-          <h1>todos</h1>
-          <TodoTextInput newTodo={true}
+      <div className="ui secondary pointing menu">
+        <a className="active item">
+          Home
+        </a>
+        <a className="item">
+          Messages
+        </a>
+        <a className="item">
+          Friends
+        </a>
+        <div className="right menu">
+          <a className="ui item">
+            <TodoTextInput newTodo={true}
                          onSave={::this.handleSave}
                          placeholder='What needs to be done?' />
-      </header>
+          </a>
+        </div>
+      </div>
     );
   }
 }

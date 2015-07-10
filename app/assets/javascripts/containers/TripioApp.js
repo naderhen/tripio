@@ -17,10 +17,9 @@ export default class TodoApp {
   renderChild({ todos, dispatch }) {
     const actions = bindActionCreators(TripioActions, dispatch);
     return (
-      <div>
+      <div className="ui container">
         <Header addTodo={actions.addTodo} />
         <MainSection todos={todos} actions={actions} />
-        <div className="ui segment"></div>
       </div>
     );
   }
