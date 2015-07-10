@@ -1,7 +1,7 @@
 import React from 'react';
-import App from './containers/App';
+import Main from './containers/Main';
 
 React.render(
-  <App />,
+  <Main />,
   document.getElementById('root')
 );

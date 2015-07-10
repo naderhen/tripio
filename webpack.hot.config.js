@@ -4,6 +4,8 @@ module.exports = {
  
   // Set 'context' for Rails Asset Pipeline
   context: __dirname + '/app/assets/javascripts',
+
+  devtool: 'eval',
  
   entry: {
     App: [
