@@ -42,16 +42,22 @@ export default class TodoItem extends Component {
       );
     } else {
       element = (
-        <div className='view'>
-          <input className='toggle'
+        <div className="ui segment grid">
+          <div className="two wide column">
+            <img className="ui medium circular bordered image" src="http://semantic-ui.com/images/wireframe/white-image.png" />
+          </div>
+          <div className="twelve wide column">
+            <h3 onDoubleClick={::this.handleDoubleClick}>{todo.text}</h3>
+            <p>Booking Ref: 1234567890</p>
+            <input className='toggle'
                  type='checkbox'
                  checked={todo.marked}
                  onChange={() => markTodo(todo.id)} />
-          <label onDoubleClick={::this.handleDoubleClick}>
-            {todo.text}
-          </label>
-          <button className='destroy'
+          </div>
+          <div className="two wide column">
+            <button className='destroy'
                   onClick={() => deleteTodo(todo.id)} />
+          </div>
         </div>
       );
     }
