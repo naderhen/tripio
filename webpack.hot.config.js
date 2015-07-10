@@ -28,7 +28,7 @@ module.exports = {
   ],
  
   resolve: {
-    extensions: ['', '.js', '.jsx', 'scss']
+    extensions: ['', '.js', '.jsx', '.css', '.scss']
   },
  
   module: {
@@ -42,7 +42,8 @@ module.exports = {
       {
         test: /\.css?$/,
         loaders: ['style', 'raw']
-      }
+      },
+      {test: /\.scss$/, loader: 'style!css!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded'}
     ]
   }
  
