@@ -1,13 +1,11 @@
-import { ADD_TODO, DELETE_TODO, EDIT_TODO, MARK_TODO, MARK_ALL, CLEAR_MARKED } from '../constants/ActionTypes';
+import { FETCH_TODOS, FETCH_TODOS_SUCCESS, ADD_TODO, DELETE_TODO, EDIT_TODO, MARK_TODO, MARK_ALL, CLEAR_MARKED } from '../constants/ActionTypes';
 
-const initialState = [{
-  text: 'Use Redux',
-  marked: false,
-  id: 0
-}];
+const initialState = [];
 
 export default function todos(state = initialState, action) {
   switch (action.type) {
+  case FETCH_TODOS_SUCCESS:
+    return action.arr;
   case ADD_TODO:
     return [{
       id: (state.length === 0) ? 0 : state[0].id + 1,

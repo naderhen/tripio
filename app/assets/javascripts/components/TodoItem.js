@@ -47,8 +47,8 @@ export default class TodoItem extends Component {
             <img className="ui medium circular bordered image" src="http://semantic-ui.com/images/wireframe/white-image.png" />
           </div>
           <div className="twelve wide column">
-            <h3 onDoubleClick={::this.handleDoubleClick}>{todo.text}</h3>
-            <p>Booking Ref: 1234567890</p>
+            <h3 onDoubleClick={::this.handleDoubleClick}>{todo.title}</h3>
+            <p>Booking Ref: {todo.booking_reference}</p>
             <input className='toggle'
                  type='checkbox'
                  checked={todo.marked}

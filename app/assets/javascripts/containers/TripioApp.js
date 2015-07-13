@@ -5,7 +5,7 @@ import Header from '../components/Header';
 import MainSection from '../components/MainSection';
 import * as TripioActions from '../actions/TripioActions';
 
-export default class TodoApp {
+export default class TripioApp {
   render() {
     return (
       <Connector select={state => ({ todos: state.todos })}>

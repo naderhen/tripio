@@ -1,4 +1,21 @@
 import * as types from '../constants/ActionTypes';
+import request from 'superagent';
+
+export function fetchTodos() {
+  return dispatch => {
+    request.get('/api/v1/events').end(function(err, resp) {
+      var body = resp.body;
+      dispatch(fetchTodosSuccess(body))
+    })
+  };
+}
+
+export function fetchTodosSuccess(arr) {
+  return {
+    type: types.FETCH_TODOS_SUCCESS,
+    arr
+  };
+}
 
 export function addTodo(text) {
   return {

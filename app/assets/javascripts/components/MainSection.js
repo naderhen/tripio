@@ -17,6 +17,7 @@ export default class MainSection extends Component {
 
   constructor(props, context) {
     super(props, context);
+    this.props.actions.fetchTodos();
     this.state = { filter: SHOW_ALL };
   }
 
